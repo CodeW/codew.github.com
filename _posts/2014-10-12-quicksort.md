@@ -49,6 +49,9 @@ first
 
 			$oriLow = $low;
 			$oriHigh = $high;
+			// $middle = (int) (($low + $high) / 2);
+			// 上面这种写法和下面这种写法在效果上一样，但在low和high比较大时，其和可能会溢出
+			$middle = $low + (int) (($high - $low) / 2);
 			$middle = (int) (($low + $high) / 2);
 			$x = $arr[$middle];
 
